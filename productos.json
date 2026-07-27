@@ -1,0 +1,179 @@
+[
+
+{ 
+        "id": 1, 
+        "nombre": "Falda Elektra", 
+        "precio": 21000, 
+        "categoria": "faldas y shorts", 
+        "imagenes": [
+            "img/faldas/1.webp", 
+            "img/faldas/2.webp", 
+            "img/faldas/3.webp",
+            "img/faldas/4.webp", 
+            "img/faldas/5.webp"
+        ],  
+        "talle": "S",
+        "descripcion": "Falda Elektra con estampa de ☠️\nSúper cómoda de algodón ☁️\n\nMEDIDAS:\nCintura: 31 CM\nCaderas: 41 CM\nLargo: 42 CM"
+    },
+
+    { 
+        "id": 2, 
+        "nombre": "White Rebellion", 
+        "precio": 12000, 
+        "categoria": "faldas y shorts", 
+        "imagenes": [
+            "img/faldas/2/1.webp", 
+            "img/faldas/2/2.webp", 
+            "img/faldas/2/3.webp",
+            "img/faldas/2/4.webp", 
+            "img/faldas/2/5.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+
+    { 
+        "id": 3, 
+        "nombre": "Franky bermuda", 
+        "precio": 45000, 
+        "categoria": "pantalones", 
+        "imagenes": [
+            "img/pantalon/1/1.webp", 
+            "img/pantalon/1/2.webp", 
+            "img/pantalon/1/3.webp",
+            "img/pantalon/1/4.webp", 
+            "img/pantalon/1/5.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 4, 
+        "nombre": "White Rebellion", 
+        "precio": 12000, 
+        "categoria": "pantalones", 
+        "imagenes": [
+            "img/pantalon/2/1.webp", 
+            "img/pantalon/2/2.webp", 
+            "img/pantalon/2/3.webp",
+            "img/pantalon/2/4.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 5, 
+        "nombre": "White Rebellion", 
+        "precio": 12000, 
+        "categoria": "pantalones", 
+        "imagenes": [
+            "img/pantalon/3/1.webp", 
+            "img/pantalon/3/2.webp", 
+            "img/pantalon/3/3.webp",
+            "img/pantalon/3/4.webp", 
+            "img/pantalon/3/5.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 6, 
+        "nombre": "White Rebellion", 
+        "precio": 12000, 
+        "categoria": "pantalones", 
+        "imagenes": [
+            "img/pantalon/4/1.webp", 
+            "img/pantalon/4/2.webp", 
+            "img/pantalon/4/3.webp",
+            "img/pantalon/4/4.webp", 
+            "img/pantalon/4/5.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+
+    { 
+        "id": 7, 
+        "nombre": "Diosa", 
+        "precio": 12000, 
+        "categoria": "vestidos", 
+        "imagenes": [
+            "img/vestidos/1/1.webp", 
+            "img/vestidos/1/2.webp", 
+            "img/vestidos/1/3.webp",
+            "img/vestidos/1/4.webp", 
+            "img/vestidos/1/5.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+
+    { 
+        "id": 8, 
+        "nombre": "Remera encaje", 
+        "precio": 12000, 
+        "categoria": "remeras", 
+        "imagenes": [
+            "img/remeras/1/1.webp"
+            
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 8, 
+        "nombre": "Top calavera", 
+        "precio": 12000, 
+        "categoria": "remeras", 
+        "imagenes": [
+            "img/remeras/2/1.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 9, 
+        "nombre": "Boxi combinada", 
+        "precio": 12000, 
+        "categoria": "remeras", 
+        "imagenes": [
+            "img/remeras/3/1.webp", 
+            "img/remeras/3/2.webp", 
+            "img/remeras/3/3.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 9, 
+        "nombre": "Boxi combinada", 
+        "precio": 12000, 
+        "categoria": "remeras", 
+        "imagenes": [
+            "img/remeras/4/1.webp", 
+            "img/remeras/4/2.webp", 
+            "img/remeras/4/3.webp",
+            "img/remeras/4/4.webp"
+            
+        ],   
+        "talle": "Único" 
+    },
+    { 
+        "id": 10, 
+        "nombre": "Boxi F.Y", 
+        "precio": 12000, 
+        "categoria": "remeras", 
+        "imagenes": [
+            "img/remeras/5/1.webp", 
+            "img/remeras/5/2.webp", 
+            "img/remeras/5/3.webp",
+            "img/remeras/5/4.webp"
+            
+        ],   
+        "talle": "Único" 
+    }
+
+    
+
+    
+]

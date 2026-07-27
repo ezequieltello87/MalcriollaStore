@@ -1,0 +1,654 @@
+@font-face {
+    font-family: 'MetrimLetter-Regular';
+    src: url('fonts/MetrimLetter-Regular.woff2') format('woff2'),
+         url('fonts/MetrimLetter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos Generales y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* ==========================================
+   HEADER DE ESCRITORIO (PC)
+   ================================---------- */
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 22px 5%;
+    background-color: #000000;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Izquierda: Logo y Store */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.header .logo {
+    font-family: 'MetrimLetter-Regular', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.sublogo-store {
+    font-size: 8px;
+    letter-spacing: 6px;
+    color: #777777;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+/* Centro: Navegación perfectamente centrada */
+.nav-desktop {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-desktop a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: color 0.2s ease;
+}
+
+.nav-desktop a:hover,
+.nav-desktop a.activo {
+    color: #ffffff;
+}
+
+/* Derecha: Carrito alineado al extremo */
+.contenedor-carrito-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icono-carrito {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Por defecto en PC el botón hamburguesa y el menú móvil están ocultos */
+.menu-hamburguesa, .menu-movil {
+    display: none;
+}
+
+
+/* ==========================================
+   ADAPTACIÓN MOBILE (Celulares y Tablets)
+   ================================---------- */
+@media (max-width: 900px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    /* Ocultar menú de PC en celulares */
+    .nav-desktop {
+        display: none;
+    }
+
+    /* Botón hamburguesa visible a la izquierda */
+    .menu-hamburguesa {
+        display: block;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 10;
+    }
+
+    /* Logo forzado al centro absoluto de la pantalla */
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+    }
+
+    /* Carrito a la derecha */
+    .contenedor-carrito-derecha {
+        z-index: 10;
+    }
+
+    /* Menú desplegable lateral (Drawer) */
+    .menu-movil {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100%;
+        background: #0f0f0f;
+        z-index: 3000;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+        border-right: 1px solid #222;
+        box-shadow: 5px 0 25px rgba(0,0,0,0.8);
+    }
+
+    .menu-movil.activo {
+        left: 0;
+    }
+
+    .menu-movil-header {
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-movil-header button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .menu-movil-links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 30px;
+    }
+
+    .menu-movil-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .menu-movil-links a.activo {
+        color: #888;
+    }
+}
+
+
+/* ==========================================
+   ESTILOS DE GRILLA Y TIENDA
+   ================================---------- */
+.seccion-tienda {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-tienda h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    font-size: 22px;
+}
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-producto {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    border-color: #444;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+    background: #111;
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.tarjeta-producto .precio {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto button {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+    width: 100%;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tarjeta-producto button:hover {
+    background: #333333;
+    color: #ffffff;
+}
+
+/* ==========================================
+   MODAL DEL CARRITO
+   ================================---------- */
+.carrito-modal {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100%;
+    background: #0f0f0f;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.8);
+    transition: 0.3s ease;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-left: 1px solid #222;
+}
+
+.carrito-modal.activo {
+    right: 0;
+}
+
+.carrito-contenido {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+}
+
+.carrito-header h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.carrito-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carrito-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 12px;
+}
+
+.carrito-item img {
+    border-radius: 4px;
+}
+
+.carrito-footer {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe57;
+}
+
+/* ==========================================
+   ESTILOS DEL DROPDOWN DE CATEGORÍAS (PC)
+   ================================---------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* El panel desplegable tipo grilla oscura */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #080808;
+    border: 1px solid #222222;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+    padding: 25px 30px;
+    display: flex;
+    gap: 35px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 2000;
+    min-width: 550px;
+}
+
+/* Mostrar al pasar el cursor */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dropdown-columna a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.dropdown-columna a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   AJUSTES PARA MENÚ MÓVIL (CATEGORÍAS)
+   ================================---------- */
+.menu-movil-subgrupo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 10px;
+    border-left: 2px solid #222;
+    margin: 5px 0;
+}
+
+.menu-movil-titulo {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.menu-movil-subgrupo .sub-link {
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    color: #bbb !important;
+}
+
+.seccion-detalle {
+    padding: 50px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor-detalle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.imagen-principal-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border: 1px solid #222;
+}
+
+.minis-galeria {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.miniatura-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: border-color 0.2s;
+}
+
+.miniatura-img:hover {
+    border-color: #fff;
+}
+
+.info-detalle h1 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.precio-detalle {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.talle-detalle, .descripcion-detalle {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-agregar-detalle {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-agregar-detalle:hover {
+    background: #333;
+    color: #fff;
+}
+
+@media(max-width: 768px) {
+    .contenedor-detalle {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el Modal de Zoom de Imágenes */
+.modal-imagen {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-imagen.activo {
+    display: flex;
+}
+
+.modal-imagen img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.modal-imagen .cerrar-zoom {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Cursor de lupa o click sobre la imagen principal del producto */
+.producto-imagen-principal img {
+    cursor: zoom-in;
+}
+
+/* ==========================================
+   CORRECCIÓN DE MÁRGENES Y CENTRADO EN MÓVIL
+   ================================---------- */
+@media (max-width: 768px) {
+    .seccion-detalle {
+        padding: 30px 20px; /* Asegura un margen lateral simétrico y equilibrado */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contenedor-detalle {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        gap: 30px;
+        box-sizing: border-box;
+    }
+
+    .galeria-detalle, 
+    .info-detalle {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Opcional: Centrar la galería y las miniaturas en celular */
+    .galeria-detalle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .minis-galeria {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* --- Efecto Fade In --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- Efecto Botón Agregado --- */
+.tarjeta-producto button.agregado {
+    background-color: #25d366 !important; /* Verde éxito */
+    color: #ffffff !important;
+    transition: background-color 0.2s ease;
+}

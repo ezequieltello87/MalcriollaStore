@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALCRIOLLA - Tienda Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Principal (Idéntico a tus otras páginas para mantener consistencia) -->
+    <header class="header">
+        <button class="menu-hamburguesa" id="btn-menu-hamburguesa" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="logo-container">
+            <a href="index.html" class="logo">MALCRIOLLA</a>
+            <span class="sublogo-store">STORE</span>
+        </div>
+        
+        <nav class="nav-desktop">
+            <a href="index.html" class="activo">INICIO</a>
+            
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">CATEGORÍAS <i class="fa-solid fa-chevron-down" style="font-size: 9px; margin-left: 4px;"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=remeras">REMERAS</a>
+                        <a href="tienda.html?cat=abrigos">ABRIGOS</a>
+                    </div>
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=pantalones">PANTALONES</a>
+                        <a href="tienda.html?cat=faldas y shorts">FALDAS Y SHORTS</a>
+                    </div>
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=vestidos">VESTIDOS</a>
+                        <a href="tienda.html?cat=accesorios">ACCESORIOS</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <a href="tienda.html">CATÁLOGO</a>
+            <a href="#contacto">QUIÉNES SOMOS</a>
+        </nav>
+
+        <div class="contenedor-carrito-derecha">
+            <div class="icono-carrito" id="btn-abrir-carrito" title="Ver carrito">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="contador-carrito">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Desplegable Móvil (Drawer) -->
+    <div class="menu-movil" id="menu-movil">
+        <div class="menu-movil-header">
+            <button id="btn-cerrar-menu">&times;</button>
+        </div>
+        <div class="menu-movil-links">
+            <a href="index.html" class="activo">INICIO</a>
+            
+            <div class="menu-movil-subgrupo">
+                <span class="menu-movil-titulo">CATEGORÍAS</span>
+                <a href="tienda.html?cat=remeras" class="sub-link">- Remeras</a>
+                <a href="tienda.html?cat=abrigos" class="sub-link">- Abrigos</a>
+                <a href="tienda.html?cat=pantalones" class="sub-link">- Pantalones</a>
+                <a href="tienda.html?cat=faldas y shorts" class="sub-link">- Faldas y shorts</a>
+                <a href="tienda.html?cat=vestidos" class="sub-link">- Vestidos</a>
+                <a href="tienda.html?cat=accesorios" class="sub-link">- Accesorios</a>
+                
+            </div>
+
+            <a href="tienda.html">CATÁLOGO</a>
+            <a href="#contacto">QUIÉNES SOMOS</a>
+        </div>
+    </div>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section class="hero-section" style="padding: 80px 20px; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('img/hero-bg.jpg') center/cover no-repeat; border-bottom: 1px solid #1a1a1a;">
+        <h1 style="font-family: 'MetrimLetter-Regular', sans-serif; font-size: 38px; letter-spacing: 4px; margin-bottom: 15px;">INDUMENTARIA URBANA & ROCK</h1>
+        <p style="color: #aaa; font-size: 14px; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase;">Ediciones limitadas con actitud</p>
+        <a href="tienda.html" style="background: #fff; color: #000; padding: 14px 30px; text-decoration: none; font-weight: bold; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; display: inline-block; transition: background 0.3s;">VER CATÁLOGO COMPLETO</a>
+    </section>
+
+    <!-- Sección de Productos Destacados -->
+    <main class="seccion-tienda">
+        <h2 style="text-align: center; margin-bottom: 40px; letter-spacing: 3px; font-size: 20px;">ÚLTIMOS INGRESOS</h2>
+        <div class="grilla-productos" id="grilla-destacados">
+            <!-- Inyectado por JavaScript -->
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="tienda.html" style="color: #fff; text-decoration: none; font-size: 12px; letter-spacing: 2px; border-bottom: 1px solid #fff; padding-bottom: 3px;">VER TODOS LOS PRODUCTOS &rarr;</a>
+        </div>
+    </main>
+
+    <!-- Sección Quiénes Somos / Contacto -->
+    <section id="contacto" style="padding: 60px 5%; background: #080808; border-top: 1px solid #1a1a1a; text-align: center;">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: 20px; letter-spacing: 3px; margin-bottom: 20px;">QUIÉNES SOMOS</h2>
+            <p style="color: #aaa; font-size: 14px; line-height: 1.6; margin-bottom: 30px; letter-spacing: 1px;">
+                MALCRIOLLA nace con la esencia del rock y la calle. Creamos prendas con personalidad, pensadas para romper con lo convencional. Cada diseño es único y fabricado con dedicación en Rosario.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; font-size: 20px;">
+                <a href="https://instagram.com" target="_blank" style="color: #fff;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5493413222628" target="_blank" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 30px 5%; background: #000; border-top: 1px solid #1a1a1a; text-align: center; color: #666; font-size: 11px; letter-spacing: 2px;">
+        <p>&copy; 2026 MALCRIOLLA STORE. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Panel Lateral del Carrito (Modal) -->
+    <div class="carrito-modal" id="carrito-modal">
+        <div class="carrito-contenido">
+            <div class="carrito-header">
+                <h2>Tus Compras</h2>
+                <button id="btn-cerrar-carrito">&times;</button>
+            </div>
+            <div class="carrito-items" id="carrito-items">
+                <!-- Items seleccionados -->
+            </div>
+            <div class="carrito-footer">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="carrito-total">$0</span>
+                </div>
+                <button id="btn-finalizar" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script específico para el Index (Carga destacados y carrito) -->
+    
+    <script type="module" src="carrito.js"></script>
+<script type="module" src="index.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALCRIOLLA - Catálogo Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Izquierda: Botón Menú Hamburguesa (visible en celular) -->
+    <button class="menu-hamburguesa" id="btn-menu-hamburguesa" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Centro: Logo y Store -->
+    <div class="logo-container">
+        <a href="index.html" class="logo">MALCRIOLLA</a>
+        <span class="sublogo-store">STORE</span>
+    </div>
+    
+    <!-- Navegación Desktop con Dropdown de Categorías -->
+    <nav class="nav-desktop">
+        <a href="index.html">INICIO</a>
+        
+        <!-- Menú Desplegable de Categorías -->
+        <div class="dropdown">
+                <a href="#" class="dropdown-toggle">CATEGORÍAS <i class="fa-solid fa-chevron-down" style="font-size: 9px; margin-left: 4px;"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=remeras">REMERAS</a>
+                        <a href="tienda.html?cat=abrigos">ABRIGOS</a>
+                    </div>
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=pantalones">PANTALONES</a>
+                        <a href="tienda.html?cat=faldas y shorts">FALDAS Y SHORTS</a>
+                    </div>
+                    <div class="dropdown-columna">
+                        <a href="tienda.html?cat=vestidos">VESTIDOS</a>
+                        <a href="tienda.html?cat=accesorios">ACCESORIOS</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        <a href="tienda.html">CATÁLOGO</a>
+        <a href="index.html#contacto">QUIENES SOMOS</a>
+    </nav>
+
+    <!-- Derecha: Carrito -->
+    <div class="contenedor-carrito-derecha">
+        <div class="icono-carrito" id="btn-abrir-carrito" title="Ver carrito">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="contador-carrito">0</span>
+        </div>
+    </div>
+</header>
+
+<!-- Menú Desplegable Móvil (Drawer) actualizado con las categorías -->
+<div class="menu-movil" id="menu-movil">
+    <div class="menu-movil-header">
+        <button id="btn-cerrar-menu">&times;</button>
+    </div>
+    <div class="menu-movil-links">
+        <a href="index.html">INICIO</a>
+        
+        <div class="menu-movil-subgrupo">
+                <span class="menu-movil-titulo">CATEGORÍAS</span>
+                <a href="tienda.html?cat=remeras" class="sub-link">- Remeras</a>
+                <a href="tienda.html?cat=abrigos" class="sub-link">- Abrigos</a>
+                <a href="tienda.html?cat=pantalones" class="sub-link">- Pantalones</a>
+                <a href="tienda.html?cat=faldas y shorts" class="sub-link">- Faldas y shorts</a>
+                <a href="tienda.html?cat=vestidos" class="sub-link">- Vestidos</a>
+                <a href="tienda.html?cat=accesorios" class="sub-link">- Accesorios</a>
+                
+            </div>
+
+        <a href="tienda.html">CATÁLOGO</a>
+        <a href="index.html#contacto">QUIENES SOMOS</a>
+    </div>
+</div>
+
+
+
+    <!-- Catálogo de Productos -->
+    <main class="seccion-tienda">
+        <h1>NUESTROS PRODUCTOS</h1>
+        <div class="grilla-productos" id="grilla-productos">
+            <!-- Inyectado por JavaScript -->
+        </div>
+    </main>
+
+    <!-- Panel Lateral del Carrito (Modal) -->
+    <div class="carrito-modal" id="carrito-modal">
+        <div class="carrito-contenido">
+            <div class="carrito-header">
+                <h2>Tus Compras</h2>
+                <button id="btn-cerrar-carrito">&times;</button>
+            </div>
+            <div class="carrito-items" id="carrito-items">
+                <!-- Items seleccionados -->
+            </div>
+            <div class="carrito-footer">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="carrito-total">$0</span>
+                </div>
+                <button id="btn-finalizar" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="module" src="carrito.js"></script>
+    <script type="module" src="tienda.js"></script>
+    <script src="animaciones.js"></script>
+</body>
+</html>
