@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main # O 'master' según cómo se llame la rama principal de tu repositorio
+
+# Carpeta donde se guardarán las imágenes que suba el cliente desde el panel
+media_folder: "img" 
+public_folder: "/img"
+
+collections:
+  - name: "tienda"
+    label: "Productos"
+    folder: ""
+    create: false
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "productos.json"
+        name: "productos"
+        label: "Catálogo de Productos"
+        fields:
+          - label: "Lista de Productos"
+            name: "productos"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Nombre", name: "nombre", widget: "string"}
+              - {label: "Precio", name: "precio", widget: "number"}
+              - {label: "Categoría", name: "categoria", widget: "select", options: ["faldas y shorts", "pantalones", "vestidos", "remeras"]}
+              - {label: "Talle", name: "talle", widget: "string"}
+              - label: "Imágenes"
+                name: "imagenes"
+                widget: "list"
+                field: {label: "Imagen", name: "imagen", widget: "image"}
